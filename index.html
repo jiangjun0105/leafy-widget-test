@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--
+      Strict CSP to simulate real-world sites.
+      Adjust https://*.leafy.studio if your widget or APIs use different hosts.
+    -->
+    <meta http-equiv="Content-Security-Policy"
+          content="default-src 'self';
+                   script-src 'self' https://www.leafy.studio;
+                   style-src 'self' 'unsafe-inline' https://www.leafy.studio;
+                   img-src * data: blob:;
+                   font-src https://www.leafy.studio data:;
+                   connect-src https://www.leafy.studio https://api.leafy.studio https://*.leafy.studio;
+                   frame-src https://www.leafy.studio https://*.leafy.studio;
+                   worker-src 'self' blob:;
+                   base-uri 'none';
+                   object-src 'none';
+                   upgrade-insecure-requests">
+    <title>Leafy Widget Test</title>
+    <style>
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 2rem; }
+      .card { border: 1px solid #ddd; border-radius: 12px; padding: 1rem 1.25rem; max-width: 720px; }
+      .muted { color: #666; font-size: 0.95rem; }
+    </style>
+  </head>
+  <body>
+    <h1>Leafy Widget Test Page</h1>
+    <div class="card">
+      <p class="muted">
+        If the widget loads successfully, you should see it appear on this page.
+        Open DevTools → Network to confirm module loads and any API calls succeed.
+      </p>
+    </div>
+
+    <!-- Your widget -->
+    <script type="module" src="https://www.leafy.studio/widgets/gina.js"></script>
+  </body>
+</html>

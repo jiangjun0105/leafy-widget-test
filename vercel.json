@@ -1,0 +1,21 @@
+{
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "default-src 'self'; script-src 'self' https://www.leafy.studio; style-src 'self' 'unsafe-inline' https://www.leafy.studio; img-src * data: blob:; font-src https://www.leafy.studio data:; connect-src https://www.leafy.studio https://api.leafy.studio https://*.leafy.studio; frame-src https://www.leafy.studio https://*.leafy.studio; worker-src 'self' blob:; base-uri 'none'; object-src 'none'; upgrade-insecure-requests"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        }
+      ]
+    }
+  ]
+}
